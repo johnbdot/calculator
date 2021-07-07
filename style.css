@@ -3,3 +3,39 @@
     padding: 0;
     margin: 0;
 }
+
+.background-color {
+    background-color: red;
+}
+
+.container {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+}
+
+.calculator {
+    margin: auto;
+    width: 400px;
+    height: 500px;
+    border: 1px black solid;
+}
+
+.calculator-inner {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.screen {
+    grid-column: span 4;
+}
+
+.button-q {
+    grid-column: span 2;
+}
+
+.button-p {
+    grid-row: span 2;
+}
