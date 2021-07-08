@@ -28,8 +28,15 @@
 }
 
 .screen {
+    display: grid;
     grid-column: span 4;
     height: 90px;
+    padding: 10px;
+}
+
+.screen-content {
+    align-self: end;
+    justify-self: end;
 }
 
 .clr, .seven, .four, .one, .zero {
