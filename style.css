@@ -5,7 +5,7 @@
 }
 
 .background-color {
-    background-color: red;
+    background-color: rgb(201, 201, 201);
 }
 
 .container {
@@ -16,8 +16,7 @@
 
 .calculator {
     margin: auto;
-    width: 400px;
-    height: 500px;
+    width: 360px;
     border: 1px black solid;
 }
 
@@ -30,12 +29,25 @@
 
 .screen {
     grid-column: span 4;
+    height: 90px;
 }
 
-.button-q {
+.clr, .seven, .four, .one, .zero {
+    height: 70px;
+}
+
+.zero {
     grid-column: span 2;
 }
 
-.button-p {
+.total {
     grid-row: span 2;
+}
+
+.button {
+    display: grid;
+}
+
+.center-content {
+    margin: auto;
 }
