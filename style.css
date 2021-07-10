@@ -4,6 +4,10 @@
     margin: 0;
 }
 
+button {
+    text-align: center;
+}
+
 .background-color {
     background-color: rgb(201, 201, 201);
 }
@@ -49,12 +53,4 @@
 
 .total {
     grid-row: span 2;
-}
-
-.button {
-    display: grid;
-}
-
-.center-content {
-    margin: auto;
 }
