@@ -27,14 +27,14 @@
     gap: 10px;
 }
 
-.screen {
+.display {
     display: grid;
     grid-column: span 4;
     height: 90px;
     padding: 10px;
 }
 
-.screen-content {
+.display-value {
     align-self: end;
     justify-self: end;
 }
