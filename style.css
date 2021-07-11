@@ -43,7 +43,7 @@ button {
     justify-self: end;
 }
 
-.clr, .seven, .four, .one, .zero {
+.clrBtn, .seven, .four, .one, .zero {
     height: 70px;
 }
 
@@ -51,6 +51,6 @@ button {
     grid-column: span 2;
 }
 
-.total {
+.equalBtn {
     grid-row: span 2;
 }
