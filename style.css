@@ -8,10 +8,6 @@ button {
     text-align: center;
 }
 
-.background-color {
-    background-color: rgb(201, 201, 201);
-}
-
 .container {
     display: grid;
     width: 100vw;
@@ -43,14 +39,14 @@ button {
     justify-self: end;
 }
 
-.clrBtn, .seven, .four, .one, .zero {
+.height-fix {
     height: 70px;
 }
 
-.zero {
+.column-span {
     grid-column: span 2;
 }
 
-.equalBtn {
+.row-span {
     grid-row: span 2;
 }
