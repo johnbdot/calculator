@@ -26,14 +26,15 @@ function divide(a, b) {
 
 numberBtn.forEach((btn) => btn.addEventListener("click", e => {
     const number = e.target.dataset.number
-    value += number
+    value.push(number)
     displayValue.textContent += number
     console.log(value)
 }))
 
 operatorBtn.forEach((btn) => btn.addEventListener("click", e => {
     const operator = e.target.dataset.operator
-    console.log(operator)
+    value.push(operator)
+    console.log(value)
 }))
 
 decimalBtn.addEventListener("click", e => {
@@ -41,7 +42,7 @@ decimalBtn.addEventListener("click", e => {
     console.log(decimal)
 })
 
-equalsBtn.addEventListener("click", e => {
-    const equals = e.target.dataset.equals
-    console.log(equals)
+equalsBtn.addEventListener("click", () => {
+    const result = value.join('')
+    console.log(eval(result))
 })
