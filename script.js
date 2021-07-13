@@ -33,20 +33,30 @@ function resetDisplay() {
     resetScreen = false
 }
 
+function calculate() {
+
+}
+
 // click events
 numberBtn.forEach((btn) => btn.addEventListener("click", e => {
     const number = e.target.dataset.number
+
     if (displayValue.textContent === "0" || resetScreen) resetDisplay()
     displayValue.textContent += number
 }))
 
 operatorBtn.forEach((btn) => btn.addEventListener("click", e => {
     const operator = e.target.dataset.operator
-    console.log(operator)
+    
+    if (currentOperation !== null) calculate()
+    firstOperand = displayValue.textContent
+    currentOperation = operator
+    resetScreen = true
 }))
 
 decimalBtn.addEventListener("click", e => {
     const decimal = e.target.dataset.decimal
+
     if (resetScreen) resetDisplay()
     if (displayValue.textContent.includes(".")) return
     displayValue.textContent += decimal
@@ -62,6 +72,7 @@ clearBtn.addEventListener("click", () => {
     secondOperand = ""
     resetScreen = false
     currentOperation = null
+    displayValue.textContent = "0"
 })
 
 backspaceBtn.addEventListener("click", () => {
