@@ -6,8 +6,12 @@ const equalsBtn = document.querySelector('[data-equals]')
 const clearBtn = document.querySelector('[data-clear]')
 const backspaceBtn = document.querySelector('[data-backspace]')
 
-let value = []
+let firstOperand = ""
+let secondOperand = ""
+let resetScreen = false
+let currentOperation = null
 
+// functions
 function add(a, b) {
     return a + b
 }
@@ -24,25 +28,42 @@ function divide(a, b) {
     return a / b
 }
 
+function resetDisplay() {
+    displayValue.textContent = ""
+    resetScreen = false
+}
+
+// click events
 numberBtn.forEach((btn) => btn.addEventListener("click", e => {
     const number = e.target.dataset.number
-    value.push(number)
+    if (displayValue.textContent === "0" || resetScreen) resetDisplay()
     displayValue.textContent += number
-    console.log(value)
 }))
 
 operatorBtn.forEach((btn) => btn.addEventListener("click", e => {
     const operator = e.target.dataset.operator
-    value.push(operator)
-    console.log(value)
+    console.log(operator)
 }))
 
 decimalBtn.addEventListener("click", e => {
     const decimal = e.target.dataset.decimal
-    console.log(decimal)
+    if (resetScreen) resetDisplay()
+    if (displayValue.textContent.includes(".")) return
+    displayValue.textContent += decimal
 })
 
 equalsBtn.addEventListener("click", () => {
     const result = value.join('')
     console.log(eval(result))
+})
+
+clearBtn.addEventListener("click", () => {
+    firstOperand = ""
+    secondOperand = ""
+    resetScreen = false
+    currentOperation = null
+})
+
+backspaceBtn.addEventListener("click", () => {
+    displayValue.textContent = displayValue.textContent.toString().slice(0, -1)
 })
