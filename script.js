@@ -34,8 +34,8 @@ function resetDisplay() {
 }
 
 function operate(operator, a, b) {
-    a = parseInt(a)
-    b = parseInt(b)
+    a = Number(a)
+    b = Number(b)
     switch(operator) {
         case "+":
             return add(a, b)
