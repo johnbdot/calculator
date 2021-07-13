@@ -51,7 +51,7 @@ function operate(operator, a, b) {
 }
 
 function calculate() {
-    if (currentOperation === null || resetScreen) return;
+    if (currentOperation === null || resetScreen) return
     secondOperand = displayValue.textContent
     displayValue.textContent = operate(currentOperation, firstOperand, secondOperand)
     currentOperation = null
